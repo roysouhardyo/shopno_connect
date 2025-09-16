@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "BULKSMSBD_API_KEY": "@bulksmsbd_api_key",
+    "BULKSMSBD_SENDER_ID": "@bulksmsbd_sender_id",
+    "RUPANTORPAY_API_KEY": "@rupantorpay_api_key",
+    "RUPANTORPAY_SECRET_KEY": "@rupantorpay_secret_key",
+    "RUPANTORPAY_WEBHOOK_SECRET": "@rupantorpay_webhook_secret"
+  },
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "regions": ["sin1"],
+  "framework": "nextjs"
+}
