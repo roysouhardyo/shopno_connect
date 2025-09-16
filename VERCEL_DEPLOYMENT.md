@@ -45,7 +45,7 @@ After deployment, add environment variables in Vercel Dashboard:
 
 | Variable Name | Value | Notes |
 |---------------|-------|-------|
-| `MONGODB_URI` | `mongodb+srv://username:password@cluster.mongodb.net/database` | Your MongoDB Atlas connection string |
+| `MONGODB_URI` | `your-mongodb-atlas-connection-string` | Your MongoDB Atlas connection string |
 | `JWT_SECRET` | `your-super-secure-jwt-secret` | Generate a strong 64+ character string |
 | `BULKSMSBD_API_KEY` | `your-api-key` | From BulkSMSBD dashboard |
 | `BULKSMSBD_SENDER_ID` | `your-sender-id` | From BulkSMSBD dashboard |

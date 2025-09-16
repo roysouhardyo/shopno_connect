@@ -10,7 +10,7 @@ This guide covers all the requirements and configurations needed to deploy Shopn
   - Create a new cluster for production
   - Set up database user with read/write permissions
   - Configure IP whitelist for your server
-  - Get connection string: `mongodb+srv://username:password@cluster.mongodb.net/shopnonagar-connect`
+  - Get connection string from MongoDB Atlas dashboard
 
 ### Database Collections
 The app will automatically create these collections:
@@ -42,7 +42,7 @@ Create `.env.local` file with these variables:
 
 ```env
 # Database
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/shopnonagar-connect?retryWrites=true&w=majority
+MONGODB_URI=your-mongodb-atlas-connection-string-here
 
 # Authentication
 JWT_SECRET=your-super-secure-jwt-secret-key-here-minimum-32-characters
